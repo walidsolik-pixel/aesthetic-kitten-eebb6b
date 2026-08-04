@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steps | خطوات للاستثمار العقاري</title>
+<meta name="description" content="Steps for Real Estate Investment - الخطوة الجاية لاستثمار عقاري ذكي في الإسكندرية والقاهرة">
+<link rel="icon" type="image/png" href="logo-gold-small.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0f2942;
+    --navy-dark:#0a1d30;
+    --gold:#c9a227;
+    --gold-light:#e6c65c;
+    --cream:#f7f5f0;
+    --gray:#6b7280;
+    --white:#ffffff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Tajawal', sans-serif;
+    color:var(--navy-dark);
+    background:var(--white);
+    line-height:1.7;
+  }
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
+  .container{max-width:1140px;margin:0 auto;padding:0 24px;}
+
+  /* Header */
+  header{
+    position:fixed;top:0;left:0;right:0;
+    background:rgba(15,41,66,0.97);
+    z-index:1000;
+    backdrop-filter:blur(6px);
+  }
+  .nav-wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    height:76px;
+  }
+  .logo{
+    font-size:24px;font-weight:900;color:var(--white);
+    letter-spacing:1px;
+  }
+  .logo span{color:var(--gold);}
+  nav ul{display:flex;gap:32px;}
+  nav a{color:var(--white);font-weight:500;font-size:15px;transition:color .2s;}
+  nav a:hover{color:var(--gold);}
+  .nav-cta{
+    background:var(--gold);color:var(--navy-dark);
+    padding:10px 22px;border-radius:6px;font-weight:700;font-size:14px;
+    transition:background .2s;
+  }
+  .nav-cta:hover{background:var(--gold-light);}
+  .menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;}
+  .menu-toggle span{width:26px;height:3px;background:var(--white);border-radius:2px;}
+
+  /* Hero */
+  .hero{
+    min-height:100vh;
+    display:flex;align-items:center;
+    background:
+      linear-gradient(135deg, rgba(10,29,48,0.92), rgba(15,41,66,0.85)),
+      url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800"><rect width="1200" height="800" fill="%230f2942"/></svg>');
+    background-size:cover;
+    padding-top:76px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;inset:0;
+    background-image:
+      linear-gradient(rgba(201,162,39,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,162,39,0.05) 1px, transparent 1px);
+    background-size:48px 48px;
+    pointer-events:none;
+  }
+  .hero-content{
+    position:relative;z-index:2;
+    max-width:720px;
+  }
+  .hero-badge{
+    display:inline-block;
+    color:var(--gold);
+    background:rgba(201,162,39,0.12);
+    border:1px solid rgba(201,162,39,0.4);
+    padding:8px 18px;border-radius:30px;
+    font-size:13px;font-weight:700;
+    margin-bottom:24px;
+  }
+  .hero h1{
+    color:var(--white);
+    font-size:clamp(32px,5vw,54px);
+    font-weight:900;
+    line-height:1.35;
+    margin-bottom:20px;
+  }
+  .hero h1 em{color:var(--gold);font-style:normal;}
+  .hero p{
+    color:#d7deea;
+    font-size:18px;
+    margin-bottom:36px;
+    max-width:560px;
+  }
+  .btn-row{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;
+    padding:15px 32px;border-radius:8px;
+    font-weight:700;font-size:15px;
+    transition:all .25s;
+  }
+  .btn-primary{background:var(--gold);color:var(--navy-dark);}
+  .btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);}
+  .btn-outline{border:1.5px solid rgba(255,255,255,0.4);color:var(--white);}
+  .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+
+  .hero-stats{
+    display:flex;gap:48px;margin-top:64px;
+    position:relative;z-index:2;
+    flex-wrap:wrap;
+  }
+  .stat-num{color:var(--gold);font-size:30px;font-weight:900;}
+  .stat-label{color:#b9c2d0;font-size:13px;margin-top:4px;}
+
+  /* Section generic */
+  section{padding:100px 0;}
+  .section-head{max-width:640px;margin:0 auto 60px;text-align:center;}
+  .eyebrow{
+    color:var(--gold);font-weight:700;font-size:13px;
+    letter-spacing:1px;margin-bottom:12px;display:block;
+  }
+  .section-head h2{
+    font-size:clamp(26px,4vw,36px);font-weight:900;color:var(--navy-dark);
+    margin-bottom:16px;
+  }
+  .section-head p{color:var(--gray);font-size:16px;}
+
+  /* About */
+  .about{background:var(--cream);}
+  .about-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+  }
+  .about-card{
+    background:var(--white);border-radius:16px;padding:44px;
+    box-shadow:0 10px 40px rgba(15,41,66,0.08);
+  }
+  .about-card h3{font-size:22px;font-weight:900;margin-bottom:16px;color:var(--navy);}
+  .about-card p{color:var(--gray);margin-bottom:14px;}
+  .locations{display:flex;gap:14px;margin-top:20px;flex-wrap:wrap;}
+  .loc-pill{
+    background:var(--navy);color:var(--white);
+    padding:8px 18px;border-radius:30px;font-size:13px;font-weight:700;
+  }
+  .loc-pill span{color:var(--gold);}
+  .about-points li{
+    display:flex;gap:14px;margin-bottom:22px;align-items:flex-start;
+  }
+  .point-num{
+    flex-shrink:0;width:38px;height:38px;border-radius:50%;
+    background:var(--navy);color:var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:900;font-size:15px;
+  }
+  .point-text h4{font-size:16px;font-weight:700;margin-bottom:4px;color:var(--navy-dark);}
+  .point-text p{color:var(--gray);font-size:14px;margin:0;}
+
+  /* Why invest */
+  .why-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+  }
+  .why-card{
+    border:1px solid #e8e8ea;border-radius:14px;padding:36px 28px;
+    transition:all .25s;
+  }
+  .why-card:hover{
+    border-color:var(--gold);box-shadow:0 14px 34px rgba(15,41,66,0.1);
+    transform:translateY(-4px);
+  }
+  .why-icon{
+    width:52px;height:52px;border-radius:12px;
+    background:linear-gradient(135deg,var(--navy),var(--navy-dark));
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold);font-size:22px;font-weight:900;
+    margin-bottom:20px;
+  }
+  .why-card h3{font-size:18px;font-weight:700;margin-bottom:10px;}
+  .why-card p{color:var(--gray);font-size:14.5px;}
+
+  /* Steps (services) */
+  .steps{background:var(--navy);position:relative;overflow:hidden;}
+  .steps .section-head h2, .steps .section-head p{color:var(--white);}
+  .steps .section-head p{color:#b9c2d0;}
+  .steps-row{
+    display:grid;grid-template-columns:repeat(5,1fr);gap:20px;
+    position:relative;
+  }
+  .step-item{text-align:center;position:relative;}
+  .step-circle{
+    width:64px;height:64px;border-radius:50%;
+    background:var(--gold);color:var(--navy-dark);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:900;font-size:22px;margin:0 auto 18px;
+    box-shadow:0 0 0 6px rgba(201,162,39,0.15);
+  }
+  .step-item h4{color:var(--white);font-size:15px;font-weight:700;margin-bottom:8px;}
+  .step-item p{color:#a9b4c4;font-size:13px;}
+
+  /* CTA band */
+  .cta-band{
+    background:linear-gradient(135deg,var(--gold),var(--gold-light));
+    padding:56px 0;
+  }
+  .cta-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    flex-wrap:wrap;gap:24px;
+  }
+  .cta-inner h3{color:var(--navy-dark);font-size:24px;font-weight:900;}
+  .cta-inner p{color:#4a3c0c;font-size:14px;margin-top:6px;}
+  .btn-dark{background:var(--navy-dark);color:var(--white);}
+  .btn-dark:hover{background:var(--navy);}
+
+  /* Contact */
+  .contact-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:50px;
+  }
+  .contact-card{
+    background:var(--cream);border-radius:16px;padding:20px 26px;
+    display:flex;align-items:center;gap:16px;margin-bottom:16px;
+  }
+  .contact-icon{
+    width:46px;height:46px;border-radius:10px;background:var(--navy);
+    color:var(--gold);display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;font-weight:900;
+  }
+  .contact-card h4{font-size:14px;color:var(--gray);margin-bottom:4px;}
+  .contact-card a, .contact-card span{font-weight:700;color:var(--navy-dark);font-size:15px;}
+  .social-row{display:flex;gap:12px;margin-top:24px;}
+  .social-btn{
+    width:46px;height:46px;border-radius:10px;
+    background:var(--navy);color:var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    font-weight:900;font-size:14px;transition:all .2s;
+  }
+  .social-btn:hover{background:var(--gold);color:var(--navy-dark);}
+
+  .form-card{
+    background:var(--navy);border-radius:16px;padding:40px;
+  }
+  .form-card h3{color:var(--white);font-size:20px;font-weight:900;margin-bottom:8px;}
+  .form-card>p{color:#b9c2d0;font-size:14px;margin-bottom:26px;}
+  .form-group{margin-bottom:16px;}
+  .form-group label{color:#d7deea;font-size:13px;display:block;margin-bottom:6px;}
+  .form-group input, .form-group textarea{
+    width:100%;padding:12px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.15);
+    background:rgba(255,255,255,0.06);color:var(--white);font-family:inherit;font-size:14px;
+  }
+  .form-group textarea{resize:vertical;min-height:90px;}
+  .form-group input::placeholder, .form-group textarea::placeholder{color:#8a93a3;}
+  .form-note{color:#8a93a3;font-size:12px;margin-top:14px;}
+
+  /* Footer */
+  footer{background:var(--navy-dark);padding:40px 0;}
+  .footer-inner{
+    display:flex;justify-content:space-between;align-items:center;
+    flex-wrap:wrap;gap:16px;
+  }
+  .footer-inner p{color:#8a93a3;font-size:13px;}
+  .footer-logo{color:var(--white);font-weight:900;font-size:18px;}
+  .footer-logo span{color:var(--gold);}
+
+  @media(max-width:900px){
+    nav ul, .nav-cta{display:none;}
+    .menu-toggle{display:flex;}
+    .about-grid, .contact-grid{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr;}
+    .steps-row{grid-template-columns:repeat(2,1fr);}
+    .cta-inner{flex-direction:column;text-align:center;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-wrap">
+    <a href="#home" class="logo"><img src="logo-gold-small.png" alt="Steps for Real Estate Investment" style="height:44px;width:auto;display:block;"></a>
+    <nav>
+      <ul>
+        <li><a href="#home">الرئيسية</a></li>
+        <li><a href="#about">من نحن</a></li>
+        <li><a href="#why">ليه تستثمر معانا</a></li>
+        <li><a href="#steps">خطوات الاستثمار</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="nav-cta">احجز استشارة</a>
+    <button class="menu-toggle" aria-label="menu" onclick="document.getElementById('mnav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div id="mnav" style="display:none;position:fixed;top:76px;right:0;left:0;background:var(--navy-dark);z-index:999;padding:20px;">
+  <ul style="display:flex;flex-direction:column;gap:18px;">
+    <li><a href="#home" style="color:#fff;">الرئيسية</a></li>
+    <li><a href="#about" style="color:#fff;">من نحن</a></li>
+    <li><a href="#why" style="color:#fff;">ليه تستثمر معانا</a></li>
+    <li><a href="#steps" style="color:#fff;">خطوات الاستثمار</a></li>
+    <li><a href="#contact" style="color:#fff;">تواصل معنا</a></li>
+  </ul>
+</div>
+<script>
+  document.querySelectorAll('#mnav a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('mnav').style.display='none';}));
+  document.querySelector('.menu-toggle').addEventListener('click',()=>{
+    const m=document.getElementById('mnav');
+    m.style.display = m.style.display==='none' ? 'block' : 'none';
+  });
+</script>
+
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <span class="hero-badge">Steps for Real Estate Investment</span>
+    <h1>الخطوة الجاية لـ <em>استثمار عقاري ذكي</em></h1>
+    <p>نساعدك تتخذ قرار استثماري عقاري صح، خطوة بخطوة — من اختيار الفرصة المناسبة لحد إتمام الصفقة، في الإسكندرية والقاهرة.</p>
+    <div class="btn-row">
+      <a href="#contact" class="btn btn-primary">احجز استشارة مجانية</a>
+      <a href="https://www.facebook.com/Steps.for.real.estate.investment" target="_blank" rel="noopener" class="btn btn-outline">تابعنا على فيسبوك</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">2026</div>
+        <div class="stat-label">فرص استثمارية محدثة</div>
+      </div>
+      <div>
+        <div class="stat-num">+2</div>
+        <div class="stat-label">فروع: الإسكندرية والقاهرة</div>
+      </div>
+      <div>
+        <div class="stat-num">461+</div>
+        <div class="stat-label">متابع على فيسبوك</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-card">
+      <h3>مين إحنا</h3>
+      <p><strong>Steps for Real Estate Investment</strong> — منصة استشارية متخصصة في الاستثمار العقاري، بنقدم لعملائنا خطوات واضحة ومدروسة بدل القرارات العشوائية.</p>
+      <p>شعارنا: "الخطوة الجاية لاستثمار ذكي" — وده اللي بنقدمه فعليًا: تحليل، متابعة، وتوجيه في كل مرحلة من مراحل قرارك الاستثماري.</p>
+      <div class="locations">
+        <span class="loc-pill">📍 <span>الإسكندرية</span></span>
+        <span class="loc-pill">📍 <span>القاهرة</span></span>
+      </div>
+    </div>
+    <ul class="about-points">
+      <li>
+        <div class="point-num">١</div>
+        <div class="point-text">
+          <h4>استشارة مبنية على بيانات</h4>
+          <p>مش رأي شخصي — تحليل فعلي لاتجاهات السوق والمناطق الواعدة.</p>
+        </div>
+      </li>
+      <li>
+        <div class="point-num">٢</div>
+        <div class="point-text">
+          <h4>متابعة لحد إتمام الصفقة</h4>
+          <p>مش بس نرشحلك، إحنا معاك من أول خطوة لحد التعاقد.</p>
+        </div>
+      </li>
+      <li>
+        <div class="point-num">٣</div>
+        <div class="point-text">
+          <h4>معرفة محلية حقيقية</h4>
+          <p>فريق شغال على الأرض في الإسكندرية والقاهرة، عارف السوق كويس.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">ليه دلوقتي</span>
+      <h2>ليه الاستثمار العقاري لسه خيار مضبوط في 2026؟</h2>
+      <p>السوق بيتغير، وقرارك لازم يتغير معاه — إحنا بنوريك الفرص الحقيقية مش الضجة الإعلانية.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">١</div>
+        <h3>حماية من التضخم</h3>
+        <p>العقار من أكتر الأصول اللي بتحافظ على قيمة فلوسك مع الوقت، خصوصًا في السوق المصري.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">٢</div>
+        <h3>مناطق نمو واضحة</h3>
+        <p>العاصمة الإدارية، الساحل الشمالي، والمناطق الساحلية بتشهد طلب متزايد على الإيجار والتملك.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">٣</div>
+        <h3>خيارات تمويل مرنة</h3>
+        <p>أنظمة سداد وتقسيط متنوعة بتخلي دخول السوق العقاري متاح لفئات أوسع من المستثمرين.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="steps">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">منهجنا</span>
+      <h2>خطواتنا الخمس نحو استثمار ناجح</h2>
+      <p>نفس الاسم، نفس الفكرة: كل قرار استثماري بيمر بخطوات واضحة.</p>
+    </div>
+    <div class="steps-row">
+      <div class="step-item">
+        <div class="step-circle">١</div>
+        <h4>تحديد الهدف</h4>
+        <p>دخل إيجاري ولا نمو رأس مال؟ بنحدد هدفك الاستثماري بدقة.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-circle">٢</div>
+        <h4>البحث والتقييم</h4>
+        <p>نرشحلك فرص متطابقة مع ميزانيتك وأهدافك.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-circle">٣</div>
+        <h4>الفحص القانوني</h4>
+        <p>نتأكد من سلامة الأوراق والعقود قبل أي التزام.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-circle">٤</div>
+        <h4>التفاوض والتمويل</h4>
+        <p>نساعدك تحصل على أفضل شروط سعر وسداد.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-circle">٥</div>
+        <h4>إتمام الصفقة</h4>
+        <p>متابعة كاملة لحد توقيع العقد وتسليم الوحدة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="container cta-inner">
+    <div>
+      <h3>جاهز تاخد الخطوة الجاية؟</h3>
+      <p>احجز استشارة مجانية وابدأ رحلتك الاستثمارية صح من أول خطوة.</p>
+    </div>
+    <a href="#contact" class="btn btn-dark">تواصل دلوقتي</a>
+  </div>
+</div>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">تواصل معنا</span>
+      <h2>ابدأ استشارتك المجانية</h2>
+      <p>ابعتلنا رسالة أو تواصل معنا مباشرة عبر أي من القنوات دي.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-card">
+          <div class="contact-icon">✉</div>
+          <div>
+            <h4>البريد الإلكتروني</h4>
+            <a href="mailto:steps.realestateinvestment@gmail.com">steps.realestateinvestment@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>الموقع</h4>
+            <span>الإسكندرية والقاهرة، مصر</span>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h4>مواعيد العمل</h4>
+            <span>متاحين طول الوقت</span>
+          </div>
+        </div>
+        <div class="social-row">
+          <a class="social-btn" href="https://www.facebook.com/Steps.for.real.estate.investment" target="_blank" rel="noopener" title="فيسبوك">f</a>
+          <a class="social-btn" href="https://instagram.com/stepsinvestment" target="_blank" rel="noopener" title="انستجرام">ig</a>
+          <a class="social-btn" href="http://www.youtube.com/@stepforsrealestateinvestment" target="_blank" rel="noopener" title="يوتيوب">yt</a>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3>اطلب استشارتك المجانية</h3>
+        <p>املأ البيانات وفريقنا هيتواصل معاك في أقرب وقت.</p>
+        <form action="mailto:steps.realestateinvestment@gmail.com" method="post" enctype="text/plain">
+          <div class="form-group">
+            <label>الاسم بالكامل</label>
+            <input type="text" name="name" placeholder="اكتب اسمك" required>
+          </div>
+          <div class="form-group">
+            <label>رقم الموبايل</label>
+            <input type="tel" name="phone" placeholder="01xxxxxxxxx" required>
+          </div>
+          <div class="form-group">
+            <label>رسالتك</label>
+            <textarea name="message" placeholder="اكتب استفسارك أو نوع الفرصة اللي بتدور عليها"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;border:none;cursor:pointer;">إرسال الطلب</button>
+        </form>
+        <p class="form-note">* هذا النموذج بيفتح تطبيق البريد الإلكتروني المستخدم عندك. لتفعيل إرسال مباشر من الموقع، لازم نربطه بخدمة إيميل على الدومين (Zoho / Hostinger / Google Workspace).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <img src="logo-gold-small.png" alt="Steps for Real Estate Investment" style="height:40px;width:auto;">
+    <p>© 2026 Steps for Real Estate Investment — جميع الحقوق محفوظة</p>
+  </div>
+</footer>
+
+</body>
+</html>
