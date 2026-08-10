@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Steps | خطوات للاستثمار العقاري</title>
-<meta name="description" content="Steps for Real Estate Investment - الخطوة الجاية لاستثمار عقاري ذكي في الإسكندرية والقاهرة">
+<title data-i18n="pageTitle">Steps | خطوات للاستثمار العقاري</title>
+<meta name="description" data-i18n-content="metaDescription" content="Steps for Real Estate Investment - الخطوة الجاية لاستثمار عقاري ذكي في الإسكندرية والقاهرة">
 <link rel="icon" type="image/png" href="logo-gold-small.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -50,12 +50,20 @@
   nav ul{display:flex;gap:32px;}
   nav a{color:var(--white);font-weight:500;font-size:15px;transition:color .2s;}
   nav a:hover{color:var(--gold);}
+  .nav-right{display:flex;align-items:center;gap:14px;}
   .nav-cta{
     background:var(--gold);color:var(--navy-dark);
     padding:10px 22px;border-radius:6px;font-weight:700;font-size:14px;
     transition:background .2s;
   }
   .nav-cta:hover{background:var(--gold-light);}
+  .lang-toggle{
+    background:transparent;color:var(--white);
+    border:1.5px solid rgba(255,255,255,0.4);
+    padding:8px 16px;border-radius:6px;font-weight:700;font-size:13px;
+    cursor:pointer;transition:all .2s;font-family:inherit;
+  }
+  .lang-toggle:hover{border-color:var(--gold);color:var(--gold);}
   .menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;}
   .menu-toggle span{width:26px;height:3px;background:var(--white);border-radius:2px;}
 
@@ -290,14 +298,17 @@
     <a href="#home" class="logo"><img src="logo-gold-small.png" alt="Steps for Real Estate Investment" style="height:44px;width:auto;display:block;"></a>
     <nav>
       <ul>
-        <li><a href="#home">الرئيسية</a></li>
-        <li><a href="#about">من نحن</a></li>
-        <li><a href="#why">ليه تستثمر معانا</a></li>
-        <li><a href="#steps">خطوات الاستثمار</a></li>
-        <li><a href="#contact">تواصل معنا</a></li>
+        <li><a href="#home" data-i18n="navHome">الرئيسية</a></li>
+        <li><a href="#about" data-i18n="navAbout">من نحن</a></li>
+        <li><a href="#why" data-i18n="navWhy">ليه تستثمر معانا</a></li>
+        <li><a href="#steps" data-i18n="navSteps">خطوات الاستثمار</a></li>
+        <li><a href="#contact" data-i18n="navContact">تواصل معنا</a></li>
       </ul>
     </nav>
-    <a href="#contact" class="nav-cta">احجز استشارة</a>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle" type="button">English</button>
+      <a href="#contact" class="nav-cta" data-i18n="navCtaBook">احجز استشارة</a>
+    </div>
     <button class="menu-toggle" aria-label="menu" onclick="document.getElementById('mnav').classList.toggle('open')">
       <span></span><span></span><span></span>
     </button>
@@ -306,11 +317,12 @@
 
 <div id="mnav" style="display:none;position:fixed;top:76px;right:0;left:0;background:var(--navy-dark);z-index:999;padding:20px;">
   <ul style="display:flex;flex-direction:column;gap:18px;">
-    <li><a href="#home" style="color:#fff;">الرئيسية</a></li>
-    <li><a href="#about" style="color:#fff;">من نحن</a></li>
-    <li><a href="#why" style="color:#fff;">ليه تستثمر معانا</a></li>
-    <li><a href="#steps" style="color:#fff;">خطوات الاستثمار</a></li>
-    <li><a href="#contact" style="color:#fff;">تواصل معنا</a></li>
+    <li><a href="#home" style="color:#fff;" data-i18n="navHome">الرئيسية</a></li>
+    <li><a href="#about" style="color:#fff;" data-i18n="navAbout">من نحن</a></li>
+    <li><a href="#why" style="color:#fff;" data-i18n="navWhy">ليه تستثمر معانا</a></li>
+    <li><a href="#steps" style="color:#fff;" data-i18n="navSteps">خطوات الاستثمار</a></li>
+    <li><a href="#contact" style="color:#fff;" data-i18n="navContact">تواصل معنا</a></li>
+    <li><button class="lang-toggle" id="langToggleMobile" type="button" style="width:fit-content;">English</button></li>
   </ul>
 </div>
 <script>
@@ -324,24 +336,24 @@
 <section class="hero" id="home">
   <div class="container hero-content">
     <span class="hero-badge">Steps for Real Estate Investment</span>
-    <h1>الخطوة الجاية لـ <em>استثمار عقاري ذكي</em></h1>
-    <p>نساعدك تتخذ قرار استثماري عقاري صح، خطوة بخطوة — من اختيار الفرصة المناسبة لحد إتمام الصفقة، في الإسكندرية والقاهرة.</p>
+    <h1 data-i18n="heroTitle">الخطوة الجاية لـ <em>استثمار عقاري ذكي</em></h1>
+    <p data-i18n="heroText">نساعدك تتخذ قرار استثماري عقاري صح، خطوة بخطوة — من اختيار الفرصة المناسبة لحد إتمام الصفقة، في الإسكندرية والقاهرة.</p>
     <div class="btn-row">
-      <a href="#contact" class="btn btn-primary">احجز استشارة مجانية</a>
-      <a href="https://www.facebook.com/Steps.for.real.estate.investment" target="_blank" rel="noopener" class="btn btn-outline">تابعنا على فيسبوك</a>
+      <a href="#contact" class="btn btn-primary" data-i18n="heroBtnPrimary">احجز استشارة مجانية</a>
+      <a href="https://www.facebook.com/Steps.for.real.estate.investment" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="heroBtnFacebook">تابعنا على فيسبوك</a>
     </div>
     <div class="hero-stats">
       <div>
         <div class="stat-num">2026</div>
-        <div class="stat-label">فرص استثمارية محدثة</div>
+        <div class="stat-label" data-i18n="statLabel1">فرص استثمارية محدثة</div>
       </div>
       <div>
         <div class="stat-num">+2</div>
-        <div class="stat-label">فروع: الإسكندرية والقاهرة</div>
+        <div class="stat-label" data-i18n="statLabel2">فروع: الإسكندرية والقاهرة</div>
       </div>
       <div>
         <div class="stat-num">461+</div>
-        <div class="stat-label">متابع على فيسبوك</div>
+        <div class="stat-label" data-i18n="statLabel3">متابع على فيسبوك</div>
       </div>
     </div>
   </div>
@@ -350,34 +362,34 @@
 <section class="about" id="about">
   <div class="container about-grid">
     <div class="about-card">
-      <h3>مين إحنا</h3>
-      <p><strong>Steps for Real Estate Investment</strong> — منصة استشارية متخصصة في الاستثمار العقاري، بنقدم لعملائنا خطوات واضحة ومدروسة بدل القرارات العشوائية.</p>
-      <p>شعارنا: "الخطوة الجاية لاستثمار ذكي" — وده اللي بنقدمه فعليًا: تحليل، متابعة، وتوجيه في كل مرحلة من مراحل قرارك الاستثماري.</p>
+      <h3 data-i18n="aboutHeading">مين إحنا</h3>
+      <p data-i18n="aboutPara1"><strong>Steps for Real Estate Investment</strong> — منصة استشارية متخصصة في الاستثمار العقاري، بنقدم لعملائنا خطوات واضحة ومدروسة بدل القرارات العشوائية.</p>
+      <p data-i18n="aboutPara2">شعارنا: "الخطوة الجاية لاستثمار ذكي" — وده اللي بنقدمه فعليًا: تحليل، متابعة، وتوجيه في كل مرحلة من مراحل قرارك الاستثماري.</p>
       <div class="locations">
-        <span class="loc-pill">📍 <span>الإسكندرية</span></span>
-        <span class="loc-pill">📍 <span>القاهرة</span></span>
+        <span class="loc-pill">📍 <span data-i18n="locAlex">الإسكندرية</span></span>
+        <span class="loc-pill">📍 <span data-i18n="locCairo">القاهرة</span></span>
       </div>
     </div>
     <ul class="about-points">
       <li>
-        <div class="point-num">١</div>
+        <div class="point-num" data-i18n="pointNum1">١</div>
         <div class="point-text">
-          <h4>استشارة مبنية على بيانات</h4>
-          <p>مش رأي شخصي — تحليل فعلي لاتجاهات السوق والمناطق الواعدة.</p>
+          <h4 data-i18n="point1Title">استشارة مبنية على بيانات</h4>
+          <p data-i18n="point1Text">مش رأي شخصي — تحليل فعلي لاتجاهات السوق والمناطق الواعدة.</p>
         </div>
       </li>
       <li>
-        <div class="point-num">٢</div>
+        <div class="point-num" data-i18n="pointNum2">٢</div>
         <div class="point-text">
-          <h4>متابعة لحد إتمام الصفقة</h4>
-          <p>مش بس نرشحلك، إحنا معاك من أول خطوة لحد التعاقد.</p>
+          <h4 data-i18n="point2Title">متابعة لحد إتمام الصفقة</h4>
+          <p data-i18n="point2Text">مش بس نرشحلك، إحنا معاك من أول خطوة لحد التعاقد.</p>
         </div>
       </li>
       <li>
-        <div class="point-num">٣</div>
+        <div class="point-num" data-i18n="pointNum3">٣</div>
         <div class="point-text">
-          <h4>معرفة محلية حقيقية</h4>
-          <p>فريق شغال على الأرض في الإسكندرية والقاهرة، عارف السوق كويس.</p>
+          <h4 data-i18n="point3Title">معرفة محلية حقيقية</h4>
+          <p data-i18n="point3Text">فريق شغال على الأرض في الإسكندرية والقاهرة، عارف السوق كويس.</p>
         </div>
       </li>
     </ul>
@@ -387,25 +399,25 @@
 <section class="why" id="why">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">ليه دلوقتي</span>
-      <h2>ليه الاستثمار العقاري لسه خيار مضبوط في 2026؟</h2>
-      <p>السوق بيتغير، وقرارك لازم يتغير معاه — إحنا بنوريك الفرص الحقيقية مش الضجة الإعلانية.</p>
+      <span class="eyebrow" data-i18n="whyEyebrow">ليه دلوقتي</span>
+      <h2 data-i18n="whyHeading">ليه الاستثمار العقاري لسه خيار مضبوط في 2026؟</h2>
+      <p data-i18n="whyText">السوق بيتغير، وقرارك لازم يتغير معاه — إحنا بنوريك الفرص الحقيقية مش الضجة الإعلانية.</p>
     </div>
     <div class="why-grid">
       <div class="why-card">
-        <div class="why-icon">١</div>
-        <h3>حماية من التضخم</h3>
-        <p>العقار من أكتر الأصول اللي بتحافظ على قيمة فلوسك مع الوقت، خصوصًا في السوق المصري.</p>
+        <div class="why-icon" data-i18n="whyIcon1">١</div>
+        <h3 data-i18n="why1Title">حماية من التضخم</h3>
+        <p data-i18n="why1Text">العقار من أكتر الأصول اللي بتحافظ على قيمة فلوسك مع الوقت، خصوصًا في السوق المصري.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon">٢</div>
-        <h3>مناطق نمو واضحة</h3>
-        <p>العاصمة الإدارية، الساحل الشمالي، والمناطق الساحلية بتشهد طلب متزايد على الإيجار والتملك.</p>
+        <div class="why-icon" data-i18n="whyIcon2">٢</div>
+        <h3 data-i18n="why2Title">مناطق نمو واضحة</h3>
+        <p data-i18n="why2Text">العاصمة الإدارية، الساحل الشمالي، والمناطق الساحلية بتشهد طلب متزايد على الإيجار والتملك.</p>
       </div>
       <div class="why-card">
-        <div class="why-icon">٣</div>
-        <h3>خيارات تمويل مرنة</h3>
-        <p>أنظمة سداد وتقسيط متنوعة بتخلي دخول السوق العقاري متاح لفئات أوسع من المستثمرين.</p>
+        <div class="why-icon" data-i18n="whyIcon3">٣</div>
+        <h3 data-i18n="why3Title">خيارات تمويل مرنة</h3>
+        <p data-i18n="why3Text">أنظمة سداد وتقسيط متنوعة بتخلي دخول السوق العقاري متاح لفئات أوسع من المستثمرين.</p>
       </div>
     </div>
   </div>
@@ -414,35 +426,35 @@
 <section class="steps" id="steps">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">منهجنا</span>
-      <h2>خطواتنا الخمس نحو استثمار ناجح</h2>
-      <p>نفس الاسم، نفس الفكرة: كل قرار استثماري بيمر بخطوات واضحة.</p>
+      <span class="eyebrow" data-i18n="stepsEyebrow">منهجنا</span>
+      <h2 data-i18n="stepsHeading">خطواتنا الخمس نحو استثمار ناجح</h2>
+      <p data-i18n="stepsText">نفس الاسم، نفس الفكرة: كل قرار استثماري بيمر بخطوات واضحة.</p>
     </div>
     <div class="steps-row">
       <div class="step-item">
-        <div class="step-circle">١</div>
-        <h4>تحديد الهدف</h4>
-        <p>دخل إيجاري ولا نمو رأس مال؟ بنحدد هدفك الاستثماري بدقة.</p>
+        <div class="step-circle" data-i18n="stepNum1">١</div>
+        <h4 data-i18n="step1Title">تحديد الهدف</h4>
+        <p data-i18n="step1Text">دخل إيجاري ولا نمو رأس مال؟ بنحدد هدفك الاستثماري بدقة.</p>
       </div>
       <div class="step-item">
-        <div class="step-circle">٢</div>
-        <h4>البحث والتقييم</h4>
-        <p>نرشحلك فرص متطابقة مع ميزانيتك وأهدافك.</p>
+        <div class="step-circle" data-i18n="stepNum2">٢</div>
+        <h4 data-i18n="step2Title">البحث والتقييم</h4>
+        <p data-i18n="step2Text">نرشحلك فرص متطابقة مع ميزانيتك وأهدافك.</p>
       </div>
       <div class="step-item">
-        <div class="step-circle">٣</div>
-        <h4>الفحص القانوني</h4>
-        <p>نتأكد من سلامة الأوراق والعقود قبل أي التزام.</p>
+        <div class="step-circle" data-i18n="stepNum3">٣</div>
+        <h4 data-i18n="step3Title">الفحص القانوني</h4>
+        <p data-i18n="step3Text">نتأكد من سلامة الأوراق والعقود قبل أي التزام.</p>
       </div>
       <div class="step-item">
-        <div class="step-circle">٤</div>
-        <h4>التفاوض والتمويل</h4>
-        <p>نساعدك تحصل على أفضل شروط سعر وسداد.</p>
+        <div class="step-circle" data-i18n="stepNum4">٤</div>
+        <h4 data-i18n="step4Title">التفاوض والتمويل</h4>
+        <p data-i18n="step4Text">نساعدك تحصل على أفضل شروط سعر وسداد.</p>
       </div>
       <div class="step-item">
-        <div class="step-circle">٥</div>
-        <h4>إتمام الصفقة</h4>
-        <p>متابعة كاملة لحد توقيع العقد وتسليم الوحدة.</p>
+        <div class="step-circle" data-i18n="stepNum5">٥</div>
+        <h4 data-i18n="step5Title">إتمام الصفقة</h4>
+        <p data-i18n="step5Text">متابعة كاملة لحد توقيع العقد وتسليم الوحدة.</p>
       </div>
     </div>
   </div>
@@ -451,69 +463,71 @@
 <div class="cta-band">
   <div class="container cta-inner">
     <div>
-      <h3>جاهز تاخد الخطوة الجاية؟</h3>
-      <p>احجز استشارة مجانية وابدأ رحلتك الاستثمارية صح من أول خطوة.</p>
+      <h3 data-i18n="ctaHeading">جاهز تاخد الخطوة الجاية؟</h3>
+      <p data-i18n="ctaText">احجز استشارة مجانية وابدأ رحلتك الاستثمارية صح من أول خطوة.</p>
     </div>
-    <a href="#contact" class="btn btn-dark">تواصل دلوقتي</a>
+    <a href="#contact" class="btn btn-dark" data-i18n="ctaButton">تواصل دلوقتي</a>
   </div>
 </div>
 
 <section id="contact">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">تواصل معنا</span>
-      <h2>ابدأ استشارتك المجانية</h2>
-      <p>ابعتلنا رسالة أو تواصل معنا مباشرة عبر أي من القنوات دي.</p>
+      <span class="eyebrow" data-i18n="contactEyebrow">تواصل معنا</span>
+      <h2 data-i18n="contactHeading">ابدأ استشارتك المجانية</h2>
+      <p data-i18n="contactText">ابعتلنا رسالة أو تواصل معنا مباشرة عبر أي من القنوات دي.</p>
     </div>
     <div class="contact-grid">
       <div>
         <div class="contact-card">
           <div class="contact-icon">✉</div>
           <div>
-            <h4>البريد الإلكتروني</h4>
+            <h4 data-i18n="contactEmailLabel">البريد الإلكتروني</h4>
             <a href="mailto:info@steps-realestate.com">info@steps-realestate.com</a>
           </div>
         </div>
         <div class="contact-card">
           <div class="contact-icon">📍</div>
           <div>
-            <h4>الموقع</h4>
-            <span>الإسكندرية والقاهرة، مصر</span>
+            <h4 data-i18n="contactLocationLabel">الموقع</h4>
+            <span data-i18n="contactLocationValue">الإسكندرية والقاهرة، مصر</span>
           </div>
         </div>
         <div class="contact-card">
           <div class="contact-icon">🕐</div>
           <div>
-            <h4>مواعيد العمل</h4>
-            <span>متاحين طول الوقت</span>
+            <h4 data-i18n="contactHoursLabel">مواعيد العمل</h4>
+            <span data-i18n="contactHoursValue">متاحين طول الوقت</span>
           </div>
         </div>
         <div class="social-row">
-          <a class="social-btn" href="https://www.facebook.com/Steps.for.real.estate.investment" target="_blank" rel="noopener" title="فيسبوك">f</a>
-          <a class="social-btn" href="https://instagram.com/stepsforrealestateinvestment" target="_blank" rel="noopener" title="انستجرام">ig</a>
-          <a class="social-btn" href="http://www.youtube.com/@stepforsrealestateinvestment" target="_blank" rel="noopener" title="يوتيوب">yt</a><a class="social-btn" href="https://x.com/stepsinvestment" target="_blank" rel="noopener" title="X">x</a><a class="social-btn" href="https://m.me/Steps.for.real.estate.investment" target="_blank" rel="noopener" title="ماسنجر">m</a>
+          <a class="social-btn" href="https://www.facebook.com/Steps.for.real.estate.investment" target="_blank" rel="noopener" title="فيسبوك" data-i18n-title="socialFacebook">f</a>
+          <a class="social-btn" href="https://instagram.com/stepsforrealestateinvestment" target="_blank" rel="noopener" title="انستجرام" data-i18n-title="socialInstagram">ig</a>
+          <a class="social-btn" href="https://x.com/stepsinvestment" target="_blank" rel="noopener" title="X" data-i18n-title="socialX">x</a>
+          <a class="social-btn" href="http://www.youtube.com/@stepforsrealestateinvestment" target="_blank" rel="noopener" title="يوتيوب" data-i18n-title="socialYoutube">yt</a>
+          <a class="social-btn" href="https://m.me/Steps.for.real.estate.investment" target="_blank" rel="noopener" title="ماسنجر" data-i18n-title="socialMessenger">m</a>
         </div>
       </div>
 
       <div class="form-card">
-        <h3>اطلب استشارتك المجانية</h3>
-        <p>املأ البيانات وفريقنا هيتواصل معاك في أقرب وقت.</p>
+        <h3 data-i18n="formHeading">اطلب استشارتك المجانية</h3>
+        <p data-i18n="formText">املأ البيانات وفريقنا هيتواصل معاك في أقرب وقت.</p>
         <form action="mailto:info@steps-realestate.com" method="post" enctype="text/plain">
           <div class="form-group">
-            <label>الاسم بالكامل</label>
-            <input type="text" name="name" placeholder="اكتب اسمك" required>
+            <label data-i18n="formLabelName">الاسم بالكامل</label>
+            <input type="text" name="name" placeholder="اكتب اسمك" data-i18n-placeholder="formPlaceholderName" required>
           </div>
           <div class="form-group">
-            <label>رقم الموبايل</label>
+            <label data-i18n="formLabelPhone">رقم الموبايل</label>
             <input type="tel" name="phone" placeholder="01xxxxxxxxx" required>
           </div>
           <div class="form-group">
-            <label>رسالتك</label>
-            <textarea name="message" placeholder="اكتب استفسارك أو نوع الفرصة اللي بتدور عليها"></textarea>
+            <label data-i18n="formLabelMessage">رسالتك</label>
+            <textarea name="message" placeholder="اكتب استفسارك أو نوع الفرصة اللي بتدور عليها" data-i18n-placeholder="formPlaceholderMessage"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width:100%;border:none;cursor:pointer;">إرسال الطلب</button>
+          <button type="submit" class="btn btn-primary" style="width:100%;border:none;cursor:pointer;" data-i18n="formSubmit">إرسال الطلب</button>
         </form>
-        <p class="form-note">* هذا النموذج بيفتح تطبيق البريد الإلكتروني المستخدم عندك ويرسل الرسالة إلى info@steps-realestate.com.</p>
+        <p class="form-note" data-i18n="formNote">* هذا النموذج بيفتح تطبيق البريد الإلكتروني المستخدم عندك ويرسل الرسالة إلى info@steps-realestate.com.</p>
       </div>
     </div>
   </div>
@@ -522,9 +536,217 @@
 <footer>
   <div class="container footer-inner">
     <img src="logo-gold-small.png" alt="Steps for Real Estate Investment" style="height:40px;width:auto;">
-    <p>© 2026 Steps for Real Estate Investment — جميع الحقوق محفوظة</p>
+    <p data-i18n="footerText">© 2026 Steps for Real Estate Investment — جميع الحقوق محفوظة</p>
   </div>
 </footer>
+
+<script>
+(function(){
+  var translations = {
+    ar: {
+      pageTitle: "Steps | خطوات للاستثمار العقاري",
+      metaDescription: "Steps for Real Estate Investment - الخطوة الجاية لاستثمار عقاري ذكي في الإسكندرية والقاهرة",
+      navHome: "الرئيسية",
+      navAbout: "من نحن",
+      navWhy: "ليه تستثمر معانا",
+      navSteps: "خطوات الاستثمار",
+      navContact: "تواصل معنا",
+      navCtaBook: "احجز استشارة",
+      heroTitle: 'الخطوة الجاية لـ <em>استثمار عقاري ذكي</em>',
+      heroText: "نساعدك تتخذ قرار استثماري عقاري صح، خطوة بخطوة — من اختيار الفرصة المناسبة لحد إتمام الصفقة، في الإسكندرية والقاهرة.",
+      heroBtnPrimary: "احجز استشارة مجانية",
+      heroBtnFacebook: "تابعنا على فيسبوك",
+      statLabel1: "فرص استثمارية محدثة",
+      statLabel2: "فروع: الإسكندرية والقاهرة",
+      statLabel3: "متابع على فيسبوك",
+      aboutHeading: "مين إحنا",
+      aboutPara1: '<strong>Steps for Real Estate Investment</strong> — منصة استشارية متخصصة في الاستثمار العقاري، بنقدم لعملائنا خطوات واضحة ومدروسة بدل القرارات العشوائية.',
+      aboutPara2: 'شعارنا: "الخطوة الجاية لاستثمار ذكي" — وده اللي بنقدمه فعليًا: تحليل، متابعة، وتوجيه في كل مرحلة من مراحل قرارك الاستثماري.',
+      locAlex: "الإسكندرية",
+      locCairo: "القاهرة",
+      pointNum1: "١", pointNum2: "٢", pointNum3: "٣",
+      point1Title: "استشارة مبنية على بيانات",
+      point1Text: "مش رأي شخصي — تحليل فعلي لاتجاهات السوق والمناطق الواعدة.",
+      point2Title: "متابعة لحد إتمام الصفقة",
+      point2Text: "مش بس نرشحلك، إحنا معاك من أول خطوة لحد التعاقد.",
+      point3Title: "معرفة محلية حقيقية",
+      point3Text: "فريق شغال على الأرض في الإسكندرية والقاهرة، عارف السوق كويس.",
+      whyEyebrow: "ليه دلوقتي",
+      whyHeading: "ليه الاستثمار العقاري لسه خيار مضبوط في 2026؟",
+      whyText: "السوق بيتغير، وقرارك لازم يتغير معاه — إحنا بنوريك الفرص الحقيقية مش الضجة الإعلانية.",
+      whyIcon1: "١", whyIcon2: "٢", whyIcon3: "٣",
+      why1Title: "حماية من التضخم",
+      why1Text: "العقار من أكتر الأصول اللي بتحافظ على قيمة فلوسك مع الوقت، خصوصًا في السوق المصري.",
+      why2Title: "مناطق نمو واضحة",
+      why2Text: "العاصمة الإدارية، الساحل الشمالي، والمناطق الساحلية بتشهد طلب متزايد على الإيجار والتملك.",
+      why3Title: "خيارات تمويل مرنة",
+      why3Text: "أنظمة سداد وتقسيط متنوعة بتخلي دخول السوق العقاري متاح لفئات أوسع من المستثمرين.",
+      stepsEyebrow: "منهجنا",
+      stepsHeading: "خطواتنا الخمس نحو استثمار ناجح",
+      stepsText: "نفس الاسم، نفس الفكرة: كل قرار استثماري بيمر بخطوات واضحة.",
+      stepNum1: "١", stepNum2: "٢", stepNum3: "٣", stepNum4: "٤", stepNum5: "٥",
+      step1Title: "تحديد الهدف",
+      step1Text: "دخل إيجاري ولا نمو رأس مال؟ بنحدد هدفك الاستثماري بدقة.",
+      step2Title: "البحث والتقييم",
+      step2Text: "نرشحلك فرص متطابقة مع ميزانيتك وأهدافك.",
+      step3Title: "الفحص القانوني",
+      step3Text: "نتأكد من سلامة الأوراق والعقود قبل أي التزام.",
+      step4Title: "التفاوض والتمويل",
+      step4Text: "نساعدك تحصل على أفضل شروط سعر وسداد.",
+      step5Title: "إتمام الصفقة",
+      step5Text: "متابعة كاملة لحد توقيع العقد وتسليم الوحدة.",
+      ctaHeading: "جاهز تاخد الخطوة الجاية؟",
+      ctaText: "احجز استشارة مجانية وابدأ رحلتك الاستثمارية صح من أول خطوة.",
+      ctaButton: "تواصل دلوقتي",
+      contactEyebrow: "تواصل معنا",
+      contactHeading: "ابدأ استشارتك المجانية",
+      contactText: "ابعتلنا رسالة أو تواصل معنا مباشرة عبر أي من القنوات دي.",
+      contactEmailLabel: "البريد الإلكتروني",
+      contactLocationLabel: "الموقع",
+      contactLocationValue: "الإسكندرية والقاهرة، مصر",
+      contactHoursLabel: "مواعيد العمل",
+      contactHoursValue: "متاحين طول الوقت",
+      socialFacebook: "فيسبوك",
+      socialInstagram: "انستجرام",
+      socialX: "X",
+      socialYoutube: "يوتيوب",
+      socialMessenger: "ماسنجر",
+      formHeading: "اطلب استشارتك المجانية",
+      formText: "املأ البيانات وفريقنا هيتواصل معاك في أقرب وقت.",
+      formLabelName: "الاسم بالكامل",
+      formLabelPhone: "رقم الموبايل",
+      formLabelMessage: "رسالتك",
+      formPlaceholderName: "اكتب اسمك",
+      formPlaceholderMessage: "اكتب استفسارك أو نوع الفرصة اللي بتدور عليها",
+      formSubmit: "إرسال الطلب",
+      formNote: "* هذا النموذج بيفتح تطبيق البريد الإلكتروني المستخدم عندك ويرسل الرسالة إلى info@steps-realestate.com.",
+      footerText: "© 2026 Steps for Real Estate Investment — جميع الحقوق محفوظة"
+    },
+    en: {
+      pageTitle: "Steps | Real Estate Investment",
+      metaDescription: "Steps for Real Estate Investment - Your next step to smart real estate investment in Alexandria and Cairo",
+      navHome: "Home",
+      navAbout: "About Us",
+      navWhy: "Why Invest With Us",
+      navSteps: "Our Process",
+      navContact: "Contact Us",
+      navCtaBook: "Book a Consultation",
+      heroTitle: 'Your Next Step to <em>Smart Real Estate Investment</em>',
+      heroText: "We help you make the right real estate investment decision, step by step — from choosing the right opportunity to closing the deal, in Alexandria and Cairo.",
+      heroBtnPrimary: "Book a Free Consultation",
+      heroBtnFacebook: "Follow us on Facebook",
+      statLabel1: "Updated investment opportunities",
+      statLabel2: "Branches: Alexandria & Cairo",
+      statLabel3: "Facebook followers",
+      aboutHeading: "Who We Are",
+      aboutPara1: '<strong>Steps for Real Estate Investment</strong> is a specialized real estate investment consultancy, giving our clients clear, well-researched steps instead of random decisions.',
+      aboutPara2: 'Our motto: "The Next Step to Smart Investment" — and that\'s exactly what we deliver: analysis, follow-up, and guidance at every stage of your investment decision.',
+      locAlex: "Alexandria",
+      locCairo: "Cairo",
+      pointNum1: "1", pointNum2: "2", pointNum3: "3",
+      point1Title: "Data-Driven Consultation",
+      point1Text: "Not just personal opinion — real analysis of market trends and promising areas.",
+      point2Title: "Support Until the Deal Closes",
+      point2Text: "We don't just recommend — we're with you from the first step to the final contract.",
+      point3Title: "Genuine Local Knowledge",
+      point3Text: "A team working on the ground in Alexandria and Cairo, with real market expertise.",
+      whyEyebrow: "Why Now",
+      whyHeading: "Why Is Real Estate Investment Still a Smart Choice in 2026?",
+      whyText: "The market keeps changing, and your decisions should too — we show you the real opportunities, not the marketing hype.",
+      whyIcon1: "1", whyIcon2: "2", whyIcon3: "3",
+      why1Title: "Protection Against Inflation",
+      why1Text: "Real estate is one of the best assets for preserving your money's value over time, especially in the Egyptian market.",
+      why2Title: "Clear Growth Areas",
+      why2Text: "The New Administrative Capital, the North Coast, and coastal areas are seeing rising demand for rent and ownership.",
+      why3Title: "Flexible Financing Options",
+      why3Text: "Diverse payment and installment plans make entering the real estate market accessible to a wider range of investors.",
+      stepsEyebrow: "Our Method",
+      stepsHeading: "Our Five Steps to Successful Investment",
+      stepsText: "Same name, same idea: every investment decision goes through clear steps.",
+      stepNum1: "1", stepNum2: "2", stepNum3: "3", stepNum4: "4", stepNum5: "5",
+      step1Title: "Define Your Goal",
+      step1Text: "Rental income or capital growth? We pinpoint your investment goal precisely.",
+      step2Title: "Research & Evaluation",
+      step2Text: "We recommend opportunities that match your budget and goals.",
+      step3Title: "Legal Due Diligence",
+      step3Text: "We verify the paperwork and contracts before any commitment.",
+      step4Title: "Negotiation & Financing",
+      step4Text: "We help you get the best price and payment terms.",
+      step5Title: "Closing the Deal",
+      step5Text: "Full follow-up until the contract is signed and the unit is handed over.",
+      ctaHeading: "Ready to Take the Next Step?",
+      ctaText: "Book a free consultation and start your investment journey right, from the very first step.",
+      ctaButton: "Contact Us Now",
+      contactEyebrow: "Contact Us",
+      contactHeading: "Start Your Free Consultation",
+      contactText: "Send us a message or reach out directly through any of these channels.",
+      contactEmailLabel: "Email",
+      contactLocationLabel: "Location",
+      contactLocationValue: "Alexandria & Cairo, Egypt",
+      contactHoursLabel: "Business Hours",
+      contactHoursValue: "Available anytime",
+      socialFacebook: "Facebook",
+      socialInstagram: "Instagram",
+      socialX: "X",
+      socialYoutube: "YouTube",
+      socialMessenger: "Messenger",
+      formHeading: "Request Your Free Consultation",
+      formText: "Fill in your details and our team will get back to you soon.",
+      formLabelName: "Full Name",
+      formLabelPhone: "Phone Number",
+      formLabelMessage: "Your Message",
+      formPlaceholderName: "Enter your name",
+      formPlaceholderMessage: "Tell us about your inquiry or the type of opportunity you're looking for",
+      formSubmit: "Send Request",
+      formNote: "* This form opens your email app and sends the message to info@steps-realestate.com.",
+      footerText: "© 2026 Steps for Real Estate Investment — All rights reserved"
+    }
+  };
+
+  function applyLang(lang){
+    var dict = translations[lang];
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      if(dict[key] !== undefined){ el.innerHTML = dict[key]; }
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el){
+      var key = el.getAttribute('data-i18n-placeholder');
+      if(dict[key] !== undefined){ el.setAttribute('placeholder', dict[key]); }
+    });
+    document.querySelectorAll('[data-i18n-title]').forEach(function(el){
+      var key = el.getAttribute('data-i18n-title');
+      if(dict[key] !== undefined){ el.setAttribute('title', dict[key]); }
+    });
+    document.querySelectorAll('[data-i18n-content]').forEach(function(el){
+      var key = el.getAttribute('data-i18n-content');
+      if(dict[key] !== undefined){ el.setAttribute('content', dict[key]); }
+    });
+
+    var toggleLabel = lang === 'ar' ? 'English' : 'عربي';
+    var t1 = document.getElementById('langToggle');
+    var t2 = document.getElementById('langToggleMobile');
+    if(t1) t1.textContent = toggleLabel;
+    if(t2) t2.textContent = toggleLabel;
+
+    try{ localStorage.setItem('steps_lang', lang); }catch(e){}
+  }
+
+  function toggleLang(){
+    var current = document.documentElement.lang === 'en' ? 'en' : 'ar';
+    applyLang(current === 'ar' ? 'en' : 'ar');
+  }
+
+  var saved = 'ar';
+  try{ saved = localStorage.getItem('steps_lang') || 'ar'; }catch(e){}
+  applyLang(saved);
+
+  document.getElementById('langToggle').addEventListener('click', toggleLang);
+  document.getElementById('langToggleMobile').addEventListener('click', toggleLang);
+})();
+</script>
 
 </body>
 </html>
