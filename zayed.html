@@ -61,7 +61,7 @@
     letter-spacing:1px;
   }
   .logo span{color:var(--gold);}
-  nav ul{display:flex;gap:32px;}
+  nav ul{display:flex;gap:22px;}
   nav a{color:var(--white);font-weight:500;font-size:15px;transition:color .2s;}
   nav a:hover{color:var(--gold);}
   .nav-right{display:flex;align-items:center;gap:14px;}
@@ -342,19 +342,20 @@
 <body>
 <header>
   <div class="container nav-wrap">
-    <a href="/#home" class="logo"><img src="/steps-logo.png" alt="Steps for Real Estate Investment" style="height:44px;width:auto;display:block;"></a>
+    <a href="/" class="logo"><img src="/steps-logo.png" alt="Steps for Real Estate Investment" style="height:44px;width:auto;display:block;"></a>
     <nav>
       <ul>
-        <li><a href="/#home">الرئيسية</a></li>
-        <li><a href="/#about">من نحن</a></li>
-        <li><a href="/#why">ليه تستثمر معانا</a></li>
-        <li><a href="/#steps">خطوات الاستثمار</a></li>
+        <li><a href="/">الرئيسية</a></li>
+        <li><a href="/about">من نحن</a></li>
         <li><a href="/services">خدماتنا</a></li>
-        <li><a href="/#contact">تواصل معنا</a></li>
+        <li><a href="/areas">المناطق</a></li>
+        <li><a href="/why">ليه تستثمر معانا</a></li>
+        <li><a href="/process">خطوات الاستثمار</a></li>
+        <li><a href="/contact">تواصل معنا</a></li>
       </ul>
     </nav>
     <div class="nav-right">
-      <a href="/#contact" class="nav-cta">احجز استشارة</a>
+      <a href="/contact" class="nav-cta">احجز استشارة</a>
     </div>
     <button class="menu-toggle" aria-label="menu" onclick="document.getElementById('mnav').classList.toggle('open')">
       <span></span><span></span><span></span>
@@ -364,12 +365,13 @@
 
 <div id="mnav" style="display:none;position:fixed;top:76px;right:0;left:0;background:var(--navy-dark);z-index:999;padding:20px;">
   <ul style="display:flex;flex-direction:column;gap:18px;">
-    <li><a href="/#home" style="color:#fff;">الرئيسية</a></li>
-    <li><a href="/#about" style="color:#fff;">من نحن</a></li>
-    <li><a href="/#why" style="color:#fff;">ليه تستثمر معانا</a></li>
-    <li><a href="/#steps" style="color:#fff;">خطوات الاستثمار</a></li>
+    <li><a href="/" style="color:#fff;">الرئيسية</a></li>
+    <li><a href="/about" style="color:#fff;">من نحن</a></li>
     <li><a href="/services" style="color:#fff;">خدماتنا</a></li>
-    <li><a href="/#contact" style="color:#fff;">تواصل معنا</a></li>
+    <li><a href="/areas" style="color:#fff;">المناطق</a></li>
+    <li><a href="/why" style="color:#fff;">ليه تستثمر معانا</a></li>
+    <li><a href="/process" style="color:#fff;">خطوات الاستثمار</a></li>
+    <li><a href="/contact" style="color:#fff;">تواصل معنا</a></li>
   </ul>
 </div>
 <script>
@@ -388,7 +390,7 @@
     <h1>الاستثمار العقاري في <em>الشيخ زايد</em></h1>
     <p>من أكتر مناطق غرب القاهرة طلبًا للسكن والإيجار. بنساعدك تختار الكمبوند والمنطقة ونوع الوحدة المناسبين لهدفك وميزانيتك — بأرقام واضحة.</p>
     <div class="btn-row">
-      <a href="/#contact" class="btn btn-primary">احجز استشارة مجانية عن الشيخ زايد</a>
+      <a href="/contact" class="btn btn-primary">احجز استشارة مجانية عن الشيخ زايد</a>
     </div>
   </div>
 </section>
@@ -460,7 +462,7 @@
       <h3>جاهز تاخد أول خطوة في الشيخ زايد؟</h3>
       <p>استشارة مجانية، من غير أي التزام.</p>
     </div>
-    <a href="/#contact" class="btn btn-dark">احجز استشارتك</a>
+    <a href="/contact" class="btn btn-dark">احجز استشارتك</a>
   </div>
 </section>
 
