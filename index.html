@@ -100,7 +100,7 @@
     letter-spacing:1px;
   }
   .logo span{color:var(--gold);}
-  nav ul{display:flex;gap:32px;}
+  nav ul{display:flex;gap:22px;}
   nav a{color:var(--white);font-weight:500;font-size:15px;transition:color .2s;}
   nav a:hover{color:var(--gold);}
   .nav-right{display:flex;align-items:center;gap:14px;}
@@ -373,20 +373,21 @@
 
 <header>
   <div class="container nav-wrap">
-    <a href="#home" class="logo"><img src="steps-logo.png" alt="Steps for Real Estate Investment" style="height:44px;width:auto;display:block;"></a>
+    <a href="/" class="logo"><img src="steps-logo.png" alt="Steps for Real Estate Investment" style="height:44px;width:auto;display:block;"></a>
     <nav>
       <ul>
-        <li><a href="#home" data-i18n="navHome">الرئيسية</a></li>
-        <li><a href="#about" data-i18n="navAbout">من نحن</a></li>
-        <li><a href="#why" data-i18n="navWhy">ليه تستثمر معانا</a></li>
-        <li><a href="#steps" data-i18n="navSteps">خطوات الاستثمار</a></li>
+        <li><a href="/" data-i18n="navHome">الرئيسية</a></li>
+        <li><a href="/about" data-i18n="navAbout">من نحن</a></li>
         <li><a href="/services" data-i18n="navServices">خدماتنا</a></li>
-        <li><a href="#contact" data-i18n="navContact">تواصل معنا</a></li>
+        <li><a href="/areas" data-i18n="navAreas">المناطق</a></li>
+        <li><a href="/why" data-i18n="navWhy">ليه تستثمر معانا</a></li>
+        <li><a href="/process" data-i18n="navSteps">خطوات الاستثمار</a></li>
+        <li><a href="/contact" data-i18n="navContact">تواصل معنا</a></li>
       </ul>
     </nav>
     <div class="nav-right">
       <button class="lang-toggle" id="langToggle" type="button">English</button>
-      <a href="#contact" class="nav-cta" data-i18n="navCtaBook">احجز استشارة</a>
+      <a href="/contact" class="nav-cta" data-i18n="navCtaBook">احجز استشارة</a>
     </div>
     <button class="menu-toggle" aria-label="menu" onclick="document.getElementById('mnav').classList.toggle('open')">
       <span></span><span></span><span></span>
@@ -396,12 +397,13 @@
 
 <div id="mnav" style="display:none;position:fixed;top:76px;right:0;left:0;background:var(--navy-dark);z-index:999;padding:20px;">
   <ul style="display:flex;flex-direction:column;gap:18px;">
-    <li><a href="#home" style="color:#fff;" data-i18n="navHome">الرئيسية</a></li>
-    <li><a href="#about" style="color:#fff;" data-i18n="navAbout">من نحن</a></li>
-    <li><a href="#why" style="color:#fff;" data-i18n="navWhy">ليه تستثمر معانا</a></li>
-    <li><a href="#steps" style="color:#fff;" data-i18n="navSteps">خطوات الاستثمار</a></li>
+    <li><a href="/" style="color:#fff;" data-i18n="navHome">الرئيسية</a></li>
+    <li><a href="/about" style="color:#fff;" data-i18n="navAbout">من نحن</a></li>
     <li><a href="/services" style="color:#fff;" data-i18n="navServices">خدماتنا</a></li>
-    <li><a href="#contact" style="color:#fff;" data-i18n="navContact">تواصل معنا</a></li>
+    <li><a href="/areas" style="color:#fff;" data-i18n="navAreas">المناطق</a></li>
+    <li><a href="/why" style="color:#fff;" data-i18n="navWhy">ليه تستثمر معانا</a></li>
+    <li><a href="/process" style="color:#fff;" data-i18n="navSteps">خطوات الاستثمار</a></li>
+    <li><a href="/contact" style="color:#fff;" data-i18n="navContact">تواصل معنا</a></li>
     <li><button class="lang-toggle" id="langToggleMobile" type="button" style="width:fit-content;">English</button></li>
   </ul>
 </div>
@@ -685,6 +687,7 @@
       navWhy: "ليه تستثمر معانا",
       navSteps: "خطوات الاستثمار",
       navServices: "خدماتنا",
+      navAreas: "المناطق",
       navContact: "تواصل معنا",
       navCtaBook: "احجز استشارة",
       heroTitle: 'الخطوة الجاية لـ <em>استثمار عقاري ذكي</em>',
@@ -768,6 +771,7 @@
       navWhy: "Why Invest With Us",
       navSteps: "Our Process",
       navServices: "Services",
+      navAreas: "Areas",
       navContact: "Contact Us",
       navCtaBook: "Book a Consultation",
       heroTitle: 'Your Next Step to <em>Smart Real Estate Investment</em>',
