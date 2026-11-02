@@ -464,7 +464,12 @@
       <div class="form-card">
         <h3>اطلب استشارتك المجانية</h3>
         <p>املأ البيانات وفريقنا هيتواصل معاك في أقرب وقت.</p>
-        <form action="mailto:info@steps-realestate.com" method="post" enctype="text/plain">
+        <form action="https://api.web3forms.com/submit" method="POST" id="lead-form">
+          <input type="hidden" name="access_key" value="16fcb1d3-2bfb-46ce-80d2-778d52903ea2">
+          <input type="hidden" name="subject" value="طلب استشارة جديد من موقع ستيبس">
+          <input type="hidden" name="from_name" value="Steps Website">
+          <input type="hidden" name="page" value="">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
           <div class="form-group">
             <label>الاسم بالكامل</label>
             <input type="text" name="name" placeholder="اكتب اسمك" required>
@@ -479,6 +484,7 @@
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%;border:none;cursor:pointer;">إرسال الطلب</button>
         </form>
+        <p id="lead-status" role="status" style="margin-top:14px;font-size:14px;font-weight:700;display:none;"></p>
         <p class="form-note">* هذا النموذج بيفتح تطبيق البريد الإلكتروني المستخدم عندك ويرسل الرسالة إلى info@steps-realestate.com.</p>
       </div>
     </div>
@@ -492,5 +498,8 @@
     <p>© 2026 Steps for Real Estate Investment — جميع الحقوق محفوظة</p>
   </div>
 </footer>
+<script>
+(function(){var f=document.getElementById("lead-form");if(!f)return;var st=document.getElementById("lead-status");f.addEventListener("submit",function(e){e.preventDefault();var b=f.querySelector("button[type=submit]"),t=b.textContent;b.disabled=true;b.textContent="جاري الإرسال...";f.querySelector("input[name=page]").value=location.href;fetch(f.action,{method:"POST",headers:{"Accept":"application/json"},body:new FormData(f)}).then(function(r){return r.json()}).then(function(d){st.style.display="block";if(d.success){st.style.color="#FFD503";st.textContent="تم إرسال طلبك بنجاح ✅ فريق ستيبس هيتواصل معاك قريب.";f.reset();if(window.gtag)gtag("event","generate_lead",{form:"consultation"});}else{throw 0}}).catch(function(){st.style.display="block";st.style.color="#ff8a8a";st.textContent="حصلت مشكلة في الإرسال، جرّب تاني أو كلمنا على +20 48 260 6060";}).finally(function(){b.disabled=false;b.textContent=t;});});})();
+</script>
 </body>
 </html>
