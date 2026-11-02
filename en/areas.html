@@ -36,8 +36,8 @@
   :root{
     --navy:#1a1a1a;
     --navy-dark:#000000;
-    --gold:#F3BE16;
-    --gold-light:#F7D25A;
+    --gold:#FFD503;
+    --gold-light:#FFE14D;
     --cream:#f7f5f0;
     --gray:#6b7280;
     --white:#ffffff;
@@ -107,8 +107,8 @@
     content:"";
     position:absolute;inset:0;
     background-image:
-      linear-gradient(rgba(243,190,22,0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(243,190,22,0.05) 1px, transparent 1px);
+      linear-gradient(rgba(255,213,3,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,213,3,0.05) 1px, transparent 1px);
     background-size:48px 48px;
     pointer-events:none;
   }
@@ -119,8 +119,8 @@
   .hero-badge{
     display:inline-block;
     color:var(--gold);
-    background:rgba(243,190,22,0.12);
-    border:1px solid rgba(243,190,22,0.4);
+    background:rgba(255,213,3,0.12);
+    border:1px solid rgba(255,213,3,0.4);
     padding:8px 18px;border-radius:30px;
     font-size:13px;font-weight:700;
     margin-bottom:24px;
@@ -238,7 +238,7 @@
     background:var(--gold);color:var(--navy-dark);
     display:flex;align-items:center;justify-content:center;
     font-weight:900;font-size:22px;margin:0 auto 18px;
-    box-shadow:0 0 0 6px rgba(243,190,22,0.15);
+    box-shadow:0 0 0 6px rgba(255,213,3,0.15);
   }
   .step-item h4{color:var(--white);font-size:15px;font-weight:700;margin-bottom:8px;}
   .step-item p{color:#a9b4c4;font-size:13px;}
@@ -293,12 +293,12 @@
   }
   .about-visual::before{
     content:"";position:absolute;inset:0;
-    background-image:linear-gradient(rgba(243,190,22,0.08) 1px, transparent 1px),linear-gradient(90deg, rgba(243,190,22,0.08) 1px, transparent 1px);
+    background-image:linear-gradient(rgba(255,213,3,0.08) 1px, transparent 1px),linear-gradient(90deg, rgba(255,213,3,0.08) 1px, transparent 1px);
     background-size:32px 32px;pointer-events:none;
   }
   .about-visual-stat{position:relative;z-index:2;display:flex;align-items:center;gap:16px;}
   .about-visual-icon{
-    width:52px;height:52px;border-radius:12px;background:rgba(243,190,22,0.15);border:1px solid rgba(243,190,22,0.35);
+    width:52px;height:52px;border-radius:12px;background:rgba(255,213,3,0.15);border:1px solid rgba(255,213,3,0.35);
     display:flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0;
   }
   .about-visual-icon svg{width:26px;height:26px;}
@@ -347,6 +347,9 @@
   .faq-item{background:var(--white);border:1px solid #e8e2cf;border-radius:12px;padding:18px 22px;margin-bottom:12px;}
   .faq-item summary{font-weight:700;color:var(--navy-dark);cursor:pointer;font-size:16px;}
   .faq-item p{color:var(--gray);margin-top:12px;line-height:1.9;}
+  .hero::after{content:"";position:absolute;bottom:-60px;inset-inline-end:-50px;width:380px;height:405px;background:url('/steps-symbol.svg') no-repeat center/contain;opacity:.07;pointer-events:none;z-index:1;}
+  .section-head::before{content:"";display:block;width:30px;height:32px;margin:0 auto 16px;background:url('/steps-symbol.svg') no-repeat center/contain;}
+  @media (max-width:768px){.hero::after{width:220px;height:235px;bottom:-30px;inset-inline-end:-30px;}}
 </style>
 </head>
 <body>
@@ -401,13 +404,13 @@
     <h1>Investment <em>areas</em></h1>
     <p>We work in: Sadat City, Cairo, El Alamein, Sheikh Zayed, 6th of October, North Coast and the Cairo–Alex Desert Road. Choose the area you care about and explore its opportunities.</p>
     <div class="locations" style="margin-bottom:28px;">
-      <a class="loc-pill" href="/en/sadat" style="border:1px solid rgba(243,190,22,0.45);">📍 <span>Sadat City</span></a>
-      <a class="loc-pill" href="/en/cairo" style="border:1px solid rgba(243,190,22,0.45);">📍 <span>Cairo</span></a>
-      <a class="loc-pill" href="/en/alamein" style="border:1px solid rgba(243,190,22,0.45);">📍 <span>El Alamein</span></a>
-      <a class="loc-pill" href="/en/zayed" style="border:1px solid rgba(243,190,22,0.45);">📍 <span>Sheikh Zayed</span></a>
-      <a class="loc-pill" href="/en/october" style="border:1px solid rgba(243,190,22,0.45);">📍 <span>6th of October</span></a>
-      <a class="loc-pill" href="/en/sahel" style="border:1px solid rgba(243,190,22,0.45);">📍 <span>North Coast</span></a>
-      <a class="loc-pill" href="/en/desert-road" style="border:1px solid rgba(243,190,22,0.45);">📍 <span>Cairo–Alex Desert Road</span></a>
+      <a class="loc-pill" href="/en/sadat" style="border:1px solid rgba(255,213,3,0.45);">📍 <span>Sadat City</span></a>
+      <a class="loc-pill" href="/en/cairo" style="border:1px solid rgba(255,213,3,0.45);">📍 <span>Cairo</span></a>
+      <a class="loc-pill" href="/en/alamein" style="border:1px solid rgba(255,213,3,0.45);">📍 <span>El Alamein</span></a>
+      <a class="loc-pill" href="/en/zayed" style="border:1px solid rgba(255,213,3,0.45);">📍 <span>Sheikh Zayed</span></a>
+      <a class="loc-pill" href="/en/october" style="border:1px solid rgba(255,213,3,0.45);">📍 <span>6th of October</span></a>
+      <a class="loc-pill" href="/en/sahel" style="border:1px solid rgba(255,213,3,0.45);">📍 <span>North Coast</span></a>
+      <a class="loc-pill" href="/en/desert-road" style="border:1px solid rgba(255,213,3,0.45);">📍 <span>Cairo–Alex Desert Road</span></a>
     </div>
     <div class="btn-row">
       <a href="/en/contact" class="btn btn-primary">Book a free consultation</a>
